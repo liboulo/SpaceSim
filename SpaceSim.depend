@@ -730,15 +730,18 @@
 	<string>
 	<vector>
 
-1352691454 source:d:\codeblocks\spacesim\src\client\main.cpp
+1353459392 source:d:\codeblocks\spacesim\src\client\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Network.hpp>
 	<string>
 
-1352690750 source:d:\codeblocks\spacesim\src\server\main.cpp
-	<SFML/Graphics.hpp>
+1353459539 source:d:\codeblocks\spacesim\src\server\main.cpp
 	<SFML/Network.hpp>
 	<string>
+	<iostream>
+	<cstddef>
+	"Connection.h"
+	<vector>
 
 1331748415 d:\codeblocks\spacesim\sfml-2.0\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1157,4 +1160,11 @@
 	<SFML/Network/Export.hpp>
 	<SFML/Network/Socket.hpp>
 	<vector>
+
+1353464802 source:d:\codeblocks\spacesim\src\server\connection.cpp
+	"Connection.h"
+
+1353464782 d:\codeblocks\spacesim\include\server\connection.h
+	<SFML/Network.hpp>
+	<string>
 

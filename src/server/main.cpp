@@ -1,44 +1,55 @@
-#include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
 #include <string>
+#include <stdio.h>
+#include <iostream>
+#include <cstddef> // size_t is a typedef on an unsigned int
+#include "Connection.h"
+#include <vector>
 
+std::vector <Connection> connections;
+sf::IpAddress server_address;
+sf::UdpSocket socket;
+bool server_running;
+std::string current_command;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SpaceSim Server");
-    sf::IpAddress ServerAddress = sf::IpAddress::getPublicAddress();
+    server_address = sf::IpAddress::getPublicAddress();
 
-    sf::Font font( sf::Font::getDefaultFont() );
-    sf::Text current_output ("Hello World, Server is booted, and open on " + ServerAddress.toString() + "\nPress \"Esc\" to close the program.\n", font, 14);
-//    sf::Text current_command ("\t>", font, 14);
-//    current_command.setPosition(0, 14*2);
-
-    sf::UdpSocket socket;
     socket.bind(2556);
     socket.setBlocking(false);
-    sf::IpAddress ClientAddress;
-    sf::Packet Packet;
-    unsigned short port;
+    server_running = true;
 
-    while (window.isOpen())
+    std::cout << "SpaceSim Server started, public IP address: " << server_address << std::endl;
+    std::cout << "Awaiting commands and/or connections." << std::endl << std::endl;
+    current_command = " >";
+    std::cout << current_command;
+
+    sf::Packet packet;
+    sf::IpAddress client_address;
+    unsigned short remote_port;
+
+    while (server_running)
     {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed || (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
-                window.close();
-        }
-        while (socket.receive(Packet, ClientAddress, port) == sf::Socket::Done)
+  //      char c = getchar();
+  //      if(c && c > 31)
+  //      {
+  //          current_command += c;
+  //          std::cout << "\r" << current_command;
+  //      }
+        while (socket.receive(packet, client_address, remote_port) == sf::Socket::Done)
         {
             std::string s;
-            Packet >> s;
-            current_output.setString(current_output.getString() + "Received packet containing \"" + s + "\" from " + ClientAddress.toString());
+            int number;
+            packet >> s;
+            packet >> number;
+            std::cout << "\r\b\t" << "Message from " << client_address.toString() << ": " << s << " " << number;
         }
 
-        window.clear();
-        window.draw(current_output);
+  //      window.clear();
+ //       window.draw(current_output);
 //       window.draw(current_command);
-        window.display();
+ //       window.display();
         sf::sleep(sf::milliseconds(10));
     }
 

@@ -1,4 +1,3 @@
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
 #include <string>
@@ -16,14 +15,16 @@ int main()
     sf::UdpSocket socket;
     socket.bind(2556);
     socket.setBlocking(false);
-    sf::IpAddress ServerAddress = sf::IpAddress::getPublicAddress();
-    sf::Packet Packet;
+    sf::IpAddress ServerAddress = "192.168.1.101";
+    int i = 0;
 
-    Packet << "Hello, server!";
-    socket.send(Packet, ServerAddress, 2556);
 
     while (window.isOpen())
     {
+        sf::Packet Packet;
+
+        Packet << "Hello, server!" << i;
+        socket.send(Packet, ServerAddress, 2556);
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -35,7 +36,8 @@ int main()
         window.draw(current_output);
 //       window.draw(current_command);
         window.display();
-        sf::sleep(sf::milliseconds(10));
+        i++;
+        sf::sleep(sf::milliseconds(1000));
     }
 
     return 0;
