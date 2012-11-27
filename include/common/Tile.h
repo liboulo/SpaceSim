@@ -7,13 +7,10 @@
 class Tile : public Atom
 {
     public:
-        /** Default constructor */
-        Tile();
+        Tile(Atom* location);
+        Tile(unsigned long x, unsigned long y, unsigned long z);
         /** Default destructor */
         virtual ~Tile();
-        short x;
-        short y;
-        short z;
     protected:
     private:
 };

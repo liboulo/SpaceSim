@@ -1,15 +1,15 @@
-#ifndef CONNECTION_H
-#define CONNECTION_H
+#ifndef CONNECTIONHANDLER_H
+#define CONNECTIONHANDLER_H
 #include <SFML/Network.hpp>
 #include <string>
 
-class Connection
+class ConnectionHandler
 {
     public:
         /** Default constructor */
-        Connection( std::string& user, sf::IpAddress& connected_address, unsigned short& local_identifier );
+        ConnectionHandler( std::string& user, sf::IpAddress& connected_address, unsigned short& local_identifier );
         /** Default destructor */
-        virtual ~Connection();
+        virtual ~ConnectionHandler();
         bool ParsePacket(sf::Packet& Packet);
     protected:
     private:
@@ -22,4 +22,4 @@ class Connection
         unsigned long no_response_time; //How many ticks has it been since the last received packet?
 };
 
-#endif // CONNECTION_H
+#endif // CONNECTIONHANDLER_H

@@ -1,4 +1,4 @@
-#include "Connection.h"
+#include "ConnectionHandler.h"
 
 std::string trim_username(std::string user_name)
 {
@@ -12,7 +12,7 @@ std::string trim_username(std::string user_name)
     return user_name;
 }
 
-Connection::Connection( std::string& user, sf::IpAddress& connected_address, unsigned short& local_identifier )
+ConnectionHandler::ConnectionHandler( std::string& user, sf::IpAddress& connected_address, unsigned short& local_identifier )
 {
     display_name = user;
     user_name = trim_username(user);
@@ -21,12 +21,12 @@ Connection::Connection( std::string& user, sf::IpAddress& connected_address, uns
 
 }
 
-Connection::~Connection()
+ConnectionHandler::~ConnectionHandler()
 {
 
 }
 
-bool Connection::ParsePacket(sf::Packet& Packet)
+bool ConnectionHandler::ParsePacket(sf::Packet& Packet)
 {
-
+    return true;
 }

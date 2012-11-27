@@ -1,6 +1,11 @@
 #include "Tile.h"
 
-Tile::Tile()
+Tile::Tile(Atom* location) : Atom(location)
+{
+    //ctor
+}
+
+Tile::Tile(unsigned long x, unsigned long y, unsigned long z) : Atom(x,y,z)
 {
     //ctor
 }

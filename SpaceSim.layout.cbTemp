@@ -7,13 +7,16 @@
 	<File name="include\common\Tile.h" open="1" top="0" tabpos="4">
 		<Cursor position="265" topLine="0" />
 	</File>
-	<File name="src\client\main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="1133" topLine="0" />
+	<File name="src\client\main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="1193" topLine="0" />
 	</File>
 	<File name="src\common\Tile.cpp" open="1" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
 	</File>
+	<File name="src\server\Connection.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="596" topLine="0" />
+	</File>
 	<File name="src\server\main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="205" topLine="0" />
+		<Cursor position="1358" topLine="2" />
 	</File>
 </CodeBlocks_layout_file>
