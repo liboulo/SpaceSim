@@ -1,43 +1,73 @@
 #include "ConnectionHandler.h"
 //#include "Connection.h"
 
-#include <string>
-#include <stdio.h>
-#include <iostream>
-#include <vector>
 
-std::vector <ConnectionHandler> connections;
-//Connection* connection;
-sf::IpAddress server_address;
+#include <SFML/Graphics.hpp>
+#include <vector>
+#include <string>
+
+
+//First, include/compile the meta-simulation
+#include "Region.h"
+
+//Second, include and compile the game itself.
+#include "Atom.h"
+
+//Finally, include and compile the network handling.
+#include "Network.h"
+
+std::vector <Region> regions;
+Network network;
 unsigned long server_tick = 0;
+bool server_running = false;
 
 int main()
 {
-    server_address = sf::IpAddress::getPublicAddress();
-    bool server_running = true;
-    std::string current_command;
+    sf::RenderWindow window(sf::VideoMode(560, 294), "SpaceSim Client");
+    sf::Font font( sf::Font::getDefaultFont() );
 
-//    connection = new Connection(2556);
+    char output[24][80];
 
-    std::cout << "SpaceSim Server started, public IP address: " << server_address << std::endl;
-    std::cout << "Awaiting commands and/or connections." << std::endl << std::endl;
-    current_command = " >";
-    std::cout << current_command;
+    for(int i = 0; i < 24; i++)
+    {
+        for(int j = 0; j < 80; j++)
+        {
+            output[i][j] = (int)'0' + i%10;
+        }
+    }
+
+    sf::Text current_output (output[1], font, 12);
+
+    server_running = true;
+    Region world ("world");
+    regions.push_back(world);
+
+    ZLevel* level = new ZLevel(10,10);
+    level->Populate();
+
+    world.SetLevel(level);
+
 
     while (server_running)
     {
-  //      char c = getchar();
-  //      if(c && c > 31)
-  //      {
-  //          current_command += c;
-  //          std::cout << "\r" << current_command;
-  //      }
-   //     connection->ParsePackets();
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed || (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            {
+                window.close();
+                server_running = false;
+            }
+        }
 
-  //      window.clear();
- //       window.draw(current_output);
-//       window.draw(current_command);
- //       window.display();
+        window.clear();
+        for(int i = 0; i < 24; i++)
+        {
+            current_output.setString(output[i]);
+            current_output.setPosition(0,(float) (i*14));
+            window.draw(current_output);
+        }
+        window.display();
         server_tick++;
 
         sf::sleep(sf::milliseconds(10));

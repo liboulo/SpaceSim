@@ -5,6 +5,8 @@
 #include <unordered_map>
 #include <string>
 
+#include "utilities.h"
+
 #ifdef VERSION_CLIENT
 #include "Sprite.h"
 #endif
@@ -15,7 +17,7 @@ class Atom
     public:
         /** Default constructor */
         Atom(Atom* location);
-        Atom(unsigned long x, unsigned long y, unsigned long z);
+        Atom(unsigned long x, unsigned long y, unsigned long z, unsigned short region);
         /** Default destructor */
         virtual ~Atom();
 
@@ -27,25 +29,31 @@ class Atom
         void SetIconState(std::string new_icon_state);
         void SetIconAndState(std::string new_icon, std::string new_icon_state);
 
+        bool Move(int x, int y, int z);
+        bool Move(Atom &target);
+        bool Move(Direction dir);
+
 #ifdef VERSION_CLIENT
         sf::Texture* GetTexture() {return sprite->GetTexture();}
         Sprite* GetSprite() {return sprite;}
         void SetSprite(Sprite* new_sprite) {sprite = new_sprite;}
 #endif
     protected:
-    private:
         std::string icon_state; //Icon state of the atom
         std::string icon; //Path to the icon file.
 
         Atom* loc;
+
         unsigned long x;
         unsigned long y;
         unsigned long z;
+        unsigned short region;
 
 
 #ifdef VERSION_CLIENT
         Sprite* sprite; //Handled client side only, maps the icon state string to the pointer of a texture.
 #endif
+    private:
 };
 
 #endif // ATOM_H

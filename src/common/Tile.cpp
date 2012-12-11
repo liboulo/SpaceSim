@@ -5,9 +5,12 @@ Tile::Tile(Atom* location) : Atom(location)
     //ctor
 }
 
-Tile::Tile(unsigned long x, unsigned long y, unsigned long z) : Atom(x,y,z)
+Tile::Tile(unsigned long x, unsigned long y, unsigned long z, unsigned short region) : Atom(x,y,z,region)
 {
-    //ctor
+    this->x = x;
+    this->y = y;
+    this->z = z;
+    this->region = region;
 }
 
 Tile::~Tile()

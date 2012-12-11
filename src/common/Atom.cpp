@@ -6,7 +6,7 @@ Atom::Atom(Atom* location)
     //ctor
 }
 
-Atom::Atom(unsigned long x, unsigned long y, unsigned long z)
+Atom::Atom(unsigned long x, unsigned long y, unsigned long z, unsigned short region)
 {
 
 }

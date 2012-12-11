@@ -4,11 +4,11 @@
 #include <Atom.h>
 
 
-class Tile : public Atom
+class Tile: public Atom
 {
     public:
         Tile(Atom* location);
-        Tile(unsigned long x, unsigned long y, unsigned long z);
+        Tile(unsigned long x, unsigned long y, unsigned long z, unsigned short region);
         /** Default destructor */
         virtual ~Tile();
     protected:
