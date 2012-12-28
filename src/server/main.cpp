@@ -23,7 +23,7 @@ bool server_running = false;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(560, 294), "SpaceSim Client");
+    sf::RenderWindow window(sf::VideoMode(560, 294), "SpaceSim Server");
     sf::Font font( sf::Font::getDefaultFont() );
 
     char output[24][80];

@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="Debug_Server" />
-	<File name="include\common\Atom.h" open="1" top="0" tabpos="3">
-		<Cursor position="1566" topLine="5" />
+	<ActiveTarget name="Debug_Client" />
+	<File name="include\client\DMILoader.h" open="1" top="0" tabpos="3">
+		<Cursor position="252" topLine="0" />
+	</File>
+	<File name="include\client\Icon.h" open="0" top="0" tabpos="8">
+		<Cursor position="311" topLine="0" />
+	</File>
+	<File name="include\client\Sprite.h" open="0" top="0" tabpos="11">
+		<Cursor position="1871" topLine="45" />
+	</File>
+	<File name="include\common\Atom.h" open="0" top="0" tabpos="10">
+		<Cursor position="1239" topLine="33" />
 	</File>
 	<File name="include\common\Region.h" open="0" top="0" tabpos="2">
-		<Cursor position="78" topLine="0" />
+		<Cursor position="99" topLine="0" />
 	</File>
 	<File name="include\common\Tile.h" open="0" top="0" tabpos="7">
 		<Cursor position="75" topLine="0" />
 	</File>
-	<File name="include\common\ZLevel.h" open="1" top="0" tabpos="8">
+	<File name="include\common\ZLevel.h" open="0" top="0" tabpos="6">
 		<Cursor position="284" topLine="0" />
 	</File>
 	<File name="include\common\utilities.h" open="0" top="0" tabpos="6">
@@ -22,28 +31,37 @@
 	<File name="include\server\Network.h" open="0" top="0" tabpos="2">
 		<Cursor position="1213" topLine="0" />
 	</File>
+	<File name="src\client\DMILoader.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="66" topLine="0" />
+	</File>
+	<File name="src\client\Icon.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="71" topLine="0" />
+	</File>
+	<File name="src\client\Sprite.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="21" topLine="0" />
+	</File>
 	<File name="src\client\main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="744" topLine="0" />
+		<Cursor position="121" topLine="0" />
 	</File>
-	<File name="src\common\Atom.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="188" topLine="0" />
+	<File name="src\common\Atom.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="62" topLine="0" />
 	</File>
-	<File name="src\common\Region.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="288" topLine="0" />
+	<File name="src\common\Region.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="159" topLine="9" />
 	</File>
 	<File name="src\common\Tile.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="194" topLine="0" />
 	</File>
-	<File name="src\common\ZLevel.cpp" open="1" top="0" tabpos="7">
+	<File name="src\common\ZLevel.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="538" topLine="0" />
 	</File>
 	<File name="src\server\ConnectionHandler.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="702" topLine="0" />
 	</File>
-	<File name="src\server\Network.cpp" open="1" top="0" tabpos="6">
+	<File name="src\server\Network.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="634" topLine="0" />
 	</File>
-	<File name="src\server\main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="836" topLine="18" />
+	<File name="src\server\main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="462" topLine="9" />
 	</File>
 </CodeBlocks_layout_file>

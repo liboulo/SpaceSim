@@ -2,9 +2,8 @@
 #include <SFML/Network.hpp>
 #include <string>
 
+#include "DMILoader.h"
 #include "Atom.h"
-
-
 
 
 int main()
@@ -16,6 +15,9 @@ int main()
 //    sf::Text current_command ("\t>", font, 14);
 //    current_command.setPosition(0, 14*2);
 
+    StaticSprite test;
+    Direction dir = North;
+    test.AddDirection(NULL, dir);
     sf::UdpSocket socket;
     socket.bind(2556);
     socket.setBlocking(false);

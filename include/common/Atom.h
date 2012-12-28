@@ -8,9 +8,8 @@
 #include "utilities.h"
 
 #ifdef VERSION_CLIENT
-#include "Sprite.h"
-#endif
 
+#endif
 
 class Atom
 {
@@ -34,9 +33,7 @@ class Atom
         bool Move(Direction dir);
 
 #ifdef VERSION_CLIENT
-        sf::Texture* GetTexture() {return sprite->GetTexture();}
-        Sprite* GetSprite() {return sprite;}
-        void SetSprite(Sprite* new_sprite) {sprite = new_sprite;}
+
 #endif
     protected:
         std::string icon_state; //Icon state of the atom
@@ -51,7 +48,7 @@ class Atom
 
 
 #ifdef VERSION_CLIENT
-        Sprite* sprite; //Handled client side only, maps the icon state string to the pointer of a texture.
+
 #endif
     private:
 };

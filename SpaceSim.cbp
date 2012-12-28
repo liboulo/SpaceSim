@@ -98,6 +98,14 @@
 			<Add option="-static-libgcc" />
 			<Add directory=".\SFML-2.0\lib" />
 		</Linker>
+		<Unit filename="include\client\DMILoader.h">
+			<Option target="Debug_Client" />
+			<Option target="Release_Client" />
+		</Unit>
+		<Unit filename="include\client\Icon.h">
+			<Option target="Debug_Client" />
+			<Option target="Release_Client" />
+		</Unit>
 		<Unit filename="include\client\Sprite.h">
 			<Option target="Debug_Client" />
 			<Option target="Release_Client" />
@@ -114,6 +122,14 @@
 		<Unit filename="include\server\Network.h">
 			<Option target="Debug_Server" />
 			<Option target="Release_Server" />
+		</Unit>
+		<Unit filename="src\client\DMILoader.cpp">
+			<Option target="Debug_Client" />
+			<Option target="Release_Client" />
+		</Unit>
+		<Unit filename="src\client\Icon.cpp">
+			<Option target="Debug_Client" />
+			<Option target="Release_Client" />
 		</Unit>
 		<Unit filename="src\client\Sprite.cpp">
 			<Option target="Debug_Client" />
