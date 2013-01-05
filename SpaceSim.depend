@@ -730,10 +730,11 @@
 	<string>
 	<vector>
 
-1353982790 source:d:\codeblocks\spacesim\src\client\main.cpp
+1357337138 source:d:\codeblocks\spacesim\src\client\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Network.hpp>
 	<string>
+	"DMILoader.h"
 	"Atom.h"
 
 1354829813 source:d:\codeblocks\spacesim\src\server\main.cpp
@@ -1085,12 +1086,11 @@
 1354818040 d:\codeblocks\spacesim\include\common\tile.h
 	<Atom.h>
 
-1354818040 d:\codeblocks\spacesim\include\common\atom.h
+1356913776 d:\codeblocks\spacesim\include\common\atom.h
 	<vector>
 	<unordered_map>
 	<string>
 	"utilities.h"
-	"Sprite.h"
 
 1354817980 source:d:\codeblocks\spacesim\src\common\atom.cpp
 	"Atom.h"
@@ -1174,10 +1174,13 @@
 	<SFML/Network.hpp>
 	<string>
 
-1353982734 d:\codeblocks\spacesim\include\client\sprite.h
+1356913776 d:\codeblocks\spacesim\include\client\sprite.h
 	<SFML/Graphics.hpp>
+	<utilities.h>
+	<vector>
+	<stdexcept>
 
-1353981665 source:d:\codeblocks\spacesim\src\client\sprite.cpp
+1356913776 source:d:\codeblocks\spacesim\src\client\sprite.cpp
 	"Sprite.h"
 
 1353983001 d:\codeblocks\spacesim\include\server\connectionhandler.h
@@ -1215,7 +1218,7 @@
 1354829294 source:d:\codeblocks\spacesim\src\common\zlevel.cpp
 	"ZLevel.h"
 
-1354512710 d:\codeblocks\spacesim\include\common\utilities.h
+1356913776 d:\codeblocks\spacesim\include\common\utilities.h
 
 1354817273 source:d:\codeblocks\spacesim\src\server\network.cpp
 	"Network.h"
@@ -1712,4 +1715,24 @@
 
 1356675015 source:c:\dev\spacesim\src\client\sprite.cpp
 	"Sprite.h"
+
+1357336069 d:\codeblocks\spacesim\include\client\dmiloader.h
+	<fstream>
+	"Icon.h"
+
+1356913776 d:\codeblocks\spacesim\include\client\icon.h
+	"Sprite.h"
+	<string>
+	<unordered_map>
+
+1356913776 source:d:\codeblocks\spacesim\src\client\icon.cpp
+	"Icon.h"
+
+1357335154 source:d:\codeblocks\spacesim\src\common\exceptionhandler.cpp
+	"ExceptionHandler.h"
+
+1357335154 d:\codeblocks\spacesim\include\common\exceptionhandler.h
+
+1357337156 source:d:\codeblocks\spacesim\src\client\dmiloader.cpp
+	"DMILoader.h"
 

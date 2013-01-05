@@ -5,6 +5,7 @@
 #include "DMILoader.h"
 #include "Atom.h"
 
+DMILoader dmi_loader;
 
 int main()
 {
@@ -23,6 +24,7 @@ int main()
     socket.setBlocking(false);
     sf::IpAddress ServerAddress = "192.168.1.101";
     int i = 0;
+    dmi_loader.LoadFile("../../policetape.png");
 
 
     while (window.isOpen())

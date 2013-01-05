@@ -1,7 +1,10 @@
 #ifndef DMILOADER_H
 #define DMILOADER_H
 
+#include <fstream>
+#include <cstdlib>
 #include "Icon.h"
+
 
 class DMILoader
 {

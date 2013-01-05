@@ -84,8 +84,12 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wshadow" />
+			<Add option="-Wundef" />
+			<Add option="-Wswitch-default" />
 			<Add option="-std=c++0x" />
 			<Add option="-Wall" />
+			<Add option="-lstdc++" />
 			<Add option="-DSFML_STATIC" />
 			<Add directory=".\SFML-2.0\include" />
 			<Add directory="src" />
@@ -111,6 +115,7 @@
 			<Option target="Release_Client" />
 		</Unit>
 		<Unit filename="include\common\Atom.h" />
+		<Unit filename="include\common\ExceptionHandler.h" />
 		<Unit filename="include\common\Region.h" />
 		<Unit filename="include\common\Tile.h" />
 		<Unit filename="include\common\ZLevel.h" />
@@ -141,6 +146,7 @@
 			<Option target="Release_Client" />
 		</Unit>
 		<Unit filename="src\common\Atom.cpp" />
+		<Unit filename="src\common\ExceptionHandler.cpp" />
 		<Unit filename="src\common\Region.cpp" />
 		<Unit filename="src\common\Tile.cpp" />
 		<Unit filename="src\common\ZLevel.cpp" />
