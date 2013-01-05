@@ -1,8 +1,8 @@
 #include "Region.h"
 
-Region::Region(std::string name)
+Region::Region(std::string _name)
 {
-    this->name = name;
+    this->name = _name;
 }
 
 Region::~Region()

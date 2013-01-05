@@ -12,8 +12,15 @@ DMILoader::~DMILoader()
 
 Icon* DMILoader::LoadFile(std::string file_path)
 {
-    std::ifstream data_stream;
-    data_stream.open(file_path, std::ifstream::in);
+    if(icons.find(file_path) != icons.end())
+    {
+        return &icons[file_path];
+    }
+    std::ifstream data_stream (file_path.c_str(), std::ifstream::in);
+    std::filebuf *filebuffer = data_stream.rdbuf();
+    long size = filebuffer->pubseekoff (0, std::ios::end, std::ios::in);
+    char buffer[size];
+    filebuffer->sgetn(buffer, size);
 
 
     data_stream.close();

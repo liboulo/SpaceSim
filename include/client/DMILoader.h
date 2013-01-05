@@ -2,7 +2,6 @@
 #define DMILOADER_H
 
 #include <fstream>
-#include <cstdlib>
 #include "Icon.h"
 
 

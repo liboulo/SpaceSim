@@ -1,9 +1,9 @@
 #include "ZLevel.h"
 
-ZLevel::ZLevel(unsigned long x, unsigned long y)
+ZLevel::ZLevel(unsigned long _x, unsigned long _y)
 {
-    this->x = x;
-    this->y = y;
+    this->x = _x;
+    this->y = _y;
     //ctor
 }
 

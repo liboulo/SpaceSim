@@ -11,7 +11,7 @@ class Region
 {
     public:
         /** Default constructor */
-        Region(std::string name);
+        Region(std::string _name);
         Region(std::string name, std::string map_file);
         /** Default destructor */
         virtual ~Region();

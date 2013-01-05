@@ -9,7 +9,7 @@ class ZLevel
 {
     public:
         /** Default constructor */
-        ZLevel(unsigned long x, unsigned long y);
+        ZLevel(unsigned long _x, unsigned long _y);
         /** Default destructor */
         virtual ~ZLevel();
         bool Populate();

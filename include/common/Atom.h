@@ -16,7 +16,7 @@ class Atom
     public:
         /** Default constructor */
         Atom(Atom* location);
-        Atom(unsigned long x, unsigned long y, unsigned long z, unsigned short region);
+        Atom(unsigned long _x, unsigned long _y, unsigned long _z, unsigned short _region);
         /** Default destructor */
         virtual ~Atom();
 
